@@ -6,9 +6,8 @@ display: grid;
     grid-template-rows: 0.1fr 0.9fr;
     grid-template-areas:
         'header header'
-        'stack degree'
         'stack degree';
-  height: 90vh;
+    height: 100vh;
 `
 
 export const ResumeContent = styledComponents.div`
@@ -19,8 +18,6 @@ export const ResumeContent = styledComponents.div`
 `
 
 export const ItemsContainer = styledComponents.div`
-  border-left: 1px solid #ccc;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;

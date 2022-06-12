@@ -1,20 +1,23 @@
 import { SocialData } from '../../../data/data'
-import { SocialIconContainer, SocialIconsContainer } from './Social.styled'
+import { SocialIconContainer, SocialLink } from './Social.styled'
 
 const SocialsIcon = () => {
   return (
-    <SocialIconsContainer>
+    <SocialIconContainer>
       {SocialData.map((social, index) => {
         return (
-          <SocialIconContainer key={index}>
-            <a href={social.url} target='_blank' rel='noopener noreferrer'>
-              {social.label}
-              <social.icon size={25} />
-            </a>
-          </SocialIconContainer>
+          <SocialLink
+            key={index}
+            href={social.path}
+            target='_blank'
+            rel='noopener noreferrer'
+            newLabel={social.label}
+          >
+            <social.icon size={25} />
+          </SocialLink>
         )
       })}
-    </SocialIconsContainer>
+    </SocialIconContainer>
   )
 }
 

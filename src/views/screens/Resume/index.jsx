@@ -7,13 +7,16 @@ import {
   ResumeSectionContainer
 } from './Resume.styled'
 
+import { mySkills } from '../../../data/data'
+
 const Resume = () => {
   const { PublicLayout } = useLayouts()
   const {
     TitleComponent,
     SubtitleComponent,
     SpanComponent,
-    ResumeItemComponent
+    ResumeItemComponent,
+    SkillComponent
   } = useComponents()
   return (
     <PublicLayout>
@@ -22,6 +25,11 @@ const Resume = () => {
         <ResumeContent area='stack'>
           <div>
             <SubtitleComponent>My Skills</SubtitleComponent>
+            <div>
+              {mySkills.map(skill => (
+                <SkillComponent key={skill.name} skill={skill} />
+              ))}
+            </div>
           </div>
         </ResumeContent>
         <ResumeContent area='degree'>

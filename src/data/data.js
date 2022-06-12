@@ -2,7 +2,8 @@ import { AiOutlineHome } from 'react-icons/ai'
 import { AiOutlineUser } from 'react-icons/ai'
 import { TiGroupOutline } from 'react-icons/ti'
 import { BiMessageRoundedDots } from 'react-icons/bi'
-import { FiLinkedin, FiGithub, FiFacebook } from 'react-icons/fi'
+import { FiLinkedin, FiGithub } from 'react-icons/fi'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
 
 export const NavbarIconData = [
   {
@@ -87,8 +88,43 @@ export const SocialData = [
     path: 'https://github.com/sergiiop'
   },
   {
-    icon: FiFacebook,
-    label: 'Facebook',
-    path: 'https://www.facebook.com/SergiiolPerez/'
+    icon: AiOutlineWhatsApp,
+    label: 'WhatsApp',
+    path: 'https://wa.link/c7lxrs'
+  }
+]
+
+export const mySkills = [
+  {
+    name: 'React',
+    path: 'https://reactjs.org/'
+  },
+  {
+    name: 'Nodejs',
+    path: 'https://nodejs.org/en/'
+  },
+  {
+    name: 'Expressjs',
+    path: 'https://expressjs.com/'
+  },
+  {
+    name: 'MongoDB',
+    path: 'https://www.mongodb.com/'
+  },
+  {
+    name: 'Mongoose',
+    path: 'https://mongoosejs.com/'
+  },
+  {
+    name: 'Redux',
+    path: 'https://redux.js.org/'
+  },
+  {
+    name: 'React-router',
+    path: 'https://reacttraining.com/react-router/'
+  },
+  {
+    name: 'React-icons',
+    path: 'https://react-icons.netlify.com/'
   }
 ]

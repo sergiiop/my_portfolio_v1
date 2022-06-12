@@ -7,7 +7,8 @@ const Home = () => {
     SubtitleComponent,
     TitleComponent,
     ParagraphComponent,
-    LogoComponent
+    LogoComponent,
+    SocialsIcon
   } = useComponents()
 
   const { PublicLayout } = useLayouts()
@@ -29,6 +30,7 @@ const Home = () => {
           </ParagraphComponent>
           <LogoComponent />
         </FirstContainer>
+        <SocialsIcon />
       </HomeContainer>
     </PublicLayout>
   )

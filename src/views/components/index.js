@@ -1,4 +1,3 @@
-import { Navbar } from './Navbar'
 import { SocialsIcon } from './SocialsIcon'
 import { TitleComponent } from './TitleComponent'
 import { ParagraphComponent } from './ParagraphComponent'
@@ -8,14 +7,12 @@ import { Project } from './Project'
 import { FilterButton } from './FilterButton'
 import { SpanComponent } from './SpanComponent'
 import { SubtitleComponent } from './SubtitleComponent'
+import { SkillComponent } from './SkillComponent'
 
 import { ResumeItemComponent } from './ResumeItemComponent'
 
-import { Footer } from './Footer'
-
 const useComponents = () => {
   return {
-    Navbar,
     SocialsIcon,
     TitleComponent,
     ParagraphComponent,
@@ -26,7 +23,7 @@ const useComponents = () => {
     SpanComponent,
     SubtitleComponent,
     ResumeItemComponent,
-    Footer
+    SkillComponent
   }
 }
 

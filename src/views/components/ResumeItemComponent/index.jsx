@@ -2,6 +2,7 @@ import { ArticleTitle } from '../ArticleTitle'
 import { ParagraphComponent } from '../ParagraphComponent'
 import {
   ResumeItemContainer,
+  ResumeItemContent,
   ResumeTitlesContainer
 } from './ResumeItemComponent.styled'
 
@@ -10,9 +11,12 @@ const ResumeItemComponent = ({ education }) => {
     <ResumeItemContainer>
       <ResumeTitlesContainer>
         <ArticleTitle>{education.title}</ArticleTitle>
-        <h4>{education.subtitle}</h4>
       </ResumeTitlesContainer>
-      <ParagraphComponent>{education.description}</ParagraphComponent>
+      <ResumeItemContent>
+        <h4>{education.subtitle}</h4>
+
+        <ParagraphComponent>{education.description}</ParagraphComponent>
+      </ResumeItemContent>
     </ResumeItemContainer>
   )
 }

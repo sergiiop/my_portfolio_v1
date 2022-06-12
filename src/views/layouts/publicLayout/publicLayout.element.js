@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const MainContainer = styled.main`
-  height: 100vh;
   @media screen and (min-width: 790px) {
     display: flex;
     justify-content: center;

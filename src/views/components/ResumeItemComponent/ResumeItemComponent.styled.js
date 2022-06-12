@@ -4,25 +4,39 @@ export const ResumeItemContainer = styledComponents.article`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 20px 30px;
-  border: 1px solid black;
-  border-radius: 10px;
-  position: relative;
-  &::before{
-    content: '';
-    left: -22px;
-    position: absolute;
-    width: 22px;
-    border-top: 1px solid #ccc;
-  }
 `
 
 export const ResumeTitlesContainer = styledComponents.div`
+  padding-left: 22px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  & > h4 {
-    font-size: 1.4rem;
-    font-weight: 400;
+  align-items: center;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #000;
+    border-radius: 50%;
+    left: -0.55rem;
+    box-shadow: 0px 0px 20px 6px red;
+  }
+  &::after{
+    content: '2022';
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    width: 40px;
+    left: calc(-0.9rem - 5rem);
+    height: 20px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
   }
 `
+
+export const ResumeItemContent = styledComponents.div`
+border-left: 2px solid red;
+padding: 0px 0px 10px 20px;
+  `
