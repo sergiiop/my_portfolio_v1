@@ -16,13 +16,12 @@ export const ResumeTitlesContainer = styledComponents.div`
     position: absolute;
     width: 1.4rem;
     height: 1.4rem;
-    background-color: #000;
     border-radius: 50%;
     left: -0.55rem;
-    box-shadow: 0px 0px 20px 6px red;
+    box-shadow: 0px 0px 20px 6px var(--color-sec);
   }
   &::after{
-    content: '2022';
+    content: '${props => props.year}';
     position: absolute;
     background-color: #000;
     color: #fff;
@@ -34,9 +33,16 @@ export const ResumeTitlesContainer = styledComponents.div`
     align-items: center;
     padding-left: 5px;
   }
+  @media screen and (max-width: 430px) {
+    &::after{
+      left: calc(-0.9rem - 4rem);
+      width: 36px;
+      height: 18px;
+      font-size: 0.85rem;
+  }
 `
 
 export const ResumeItemContent = styledComponents.div`
-border-left: 2px solid red;
+border-left: 2px solid var(--color-sec);
 padding: 0px 0px 10px 20px;
   `

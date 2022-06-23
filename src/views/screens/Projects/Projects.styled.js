@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const ProjectSectionContainer = styled.div`
-  height: 90vh;
+  width: 100%;
 `
 
 export const ProjectsContainers = styled(motion.div)`
-  display: grid;
-  grid-row-gap: 10rem;
-  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 20px 0 105px;
 `

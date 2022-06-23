@@ -2,40 +2,33 @@ import { useEffect } from 'react'
 import { FilterContainer } from './FilterButton.styled'
 
 const FilterButton = ({
-  projects,
+  items,
   setFiltered,
-  activeProject,
-  setActiveProject
+  activeItem,
+  setActiveItem,
+  buttonProperties
 }) => {
   useEffect(() => {
-    if (activeProject === 0) {
-      console.log(projects)
-      setFiltered(projects)
+    if (activeItem === 'all') {
+      setFiltered(items)
       return
     }
-    const filtered = projects.filter(project => {
-      return project.genre_ids === activeProject
+    const filtered = items.filter(item => {
+      return item.genre === activeItem
     })
-    console.log(filtered)
     setFiltered(filtered)
-  }, [activeProject])
-
-  const buttonProperties = [
-    { id: 0, name: 'All' },
-    { id: 1, name: 'Personal Projects' },
-    { id: 2, name: 'Professional Projects' }
-  ]
+  }, [activeItem])
 
   return (
     <FilterContainer>
       {buttonProperties.map(button => {
         return (
           <button
-            key={button.id}
+            key={button.name}
             onClick={() => {
-              setActiveProject(button.id)
+              setActiveItem(button.genre)
             }}
-            className={button.id === activeProject ? 'active' : ''}
+            className={button.genre === activeItem ? 'active' : ''}
           >
             {button.name}
           </button>

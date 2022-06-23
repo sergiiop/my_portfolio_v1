@@ -1,22 +1,34 @@
 import styled from 'styled-components'
 
 export const FilterContainer = styled.div`
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 528px) {
+    display: block;
+  }
   & button {
     margin-right: 2rem;
-    min-width: 5rem;
     padding: 0.5rem 1rem;
-    border: none;
     border-radius: 1rem;
-    background: white;
-    color: rgb(65, 98, 168);
-    border: 2px solid rgb(65, 98, 168);
+    background: var(--color-background);
+    color: var(--color-sec);
+    border: 2px solid var(--color-sec);
     font-weight: bold;
     cursor: pointer;
+
+    @media screen and (max-width: 528px) {
+      font-size: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+    @media screen and (min-width: 528px) {
+      min-width: 5rem;
+    }
   }
 
   & button.active {
-    background: rgb(65, 98, 168);
-    color: white;
+    background: var(--color-sec);
+    color: var(--color-background);
+    border: 2px solid var(--color-sec);
   }
 `

@@ -17,6 +17,8 @@ html {
 body {
   min-height: 100vh;
   animation: move 1s linear infinite forwards;
+  background-color: var(--color-background);
+  color: var(--color-pri);
 }
 
 ol,
@@ -34,10 +36,9 @@ a {
 }
 
 :root {
-  --color-pri: #fafafa;
-  --color-pri-light: #fafafa;
-  --color-sec: #fafafa;
-  --color-sec-light: #fafafa;
+  --color-pri: #e3e4e6;
+  --color-sec: #f54768;
+  --color-background: #34353a;
 
   --pc-width: 75%;
   --tab-width: 90%;
@@ -49,8 +50,9 @@ body::before {
   position: fixed;
   height: 200px;
   width: 200px;
-  background: rgb(0, 255, 255);
+  background: #3b999b;
   filter: blur(140px);
+  z-index: -1;
 }
 
 body::after {
@@ -60,8 +62,9 @@ body::after {
   left: 250px;
   height: 200px;
   width: 200px;
-  background: rgb(183, 0, 255);
+  background: #5778a3;
   filter: blur(140px);
+  z-index: -1;
 }
 
 .bg-circle {
@@ -92,10 +95,4 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media (max-width: 500px) {
-  .container {
-    width: var(--phone-width);
-  }
 }

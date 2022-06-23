@@ -4,18 +4,17 @@ import { EducationQualityData } from '../../../data/data'
 import {
   ItemsContainer,
   ResumeContent,
-  ResumeSectionContainer
+  ResumeSectionContainer,
+  TitlesContainer
 } from './Resume.styled'
-
-import { mySkills } from '../../../data/data'
 
 const Resume = () => {
   const { PublicLayout } = useLayouts()
   const {
     TitleComponent,
-    SubtitleComponent,
     SpanComponent,
     ResumeItemComponent,
+    SubtitleComponent,
     SkillComponent
   } = useComponents()
   return (
@@ -23,20 +22,13 @@ const Resume = () => {
       <ResumeSectionContainer>
         <TitleComponent area='header'>Resume</TitleComponent>
         <ResumeContent area='stack'>
-          <div>
-            <SubtitleComponent>My Skills</SubtitleComponent>
-            <div>
-              {mySkills.map(skill => (
-                <SkillComponent key={skill.name} skill={skill} />
-              ))}
-            </div>
-          </div>
+          <SkillComponent />
         </ResumeContent>
         <ResumeContent area='degree'>
-          <div>
+          <TitlesContainer>
             <SubtitleComponent>Eduaction Quality</SubtitleComponent>
             <SpanComponent>2016 - Present</SpanComponent>
-          </div>
+          </TitlesContainer>
           <ItemsContainer>
             {EducationQualityData.map((item, index) => (
               <ResumeItemComponent

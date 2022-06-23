@@ -11,26 +11,33 @@ const Projects = () => {
 
   const [projects, setProjects] = useState([])
   const [filtered, setFiltered] = useState([])
-  const [activeProject, setActiveProject] = useState(0)
-
-  useEffect(() => {
-    saveProjects()
-  }, [])
+  const [activeProject, setActiveProject] = useState('all')
 
   const saveProjects = () => {
     setProjects(ProjectsData)
     setFiltered(ProjectsData)
   }
 
+  useEffect(() => {
+    saveProjects()
+  }, [])
+
+  const buttonProperties = [
+    { name: 'All', genre: 'all' },
+    { name: 'Personal Projects', genre: 'personal' },
+    { name: 'Professional Projects', genre: 'professional' }
+  ]
+
   return (
     <PublicLayout>
       <ProjectSectionContainer>
         <TitleComponent>Projects</TitleComponent>
         <FilterButton
-          projects={projects}
+          items={projects}
           setFiltered={setFiltered}
-          activeProject={activeProject}
-          setActiveProject={setActiveProject}
+          activeItem={activeProject}
+          setActiveItem={setActiveProject}
+          buttonProperties={buttonProperties}
         />
         <ProjectsContainers
           layout

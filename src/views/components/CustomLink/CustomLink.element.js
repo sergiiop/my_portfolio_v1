@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-export const NavItem = styled.li`
+export const NavItem = styled.div`
   transition: fill 0.1s ease;
-  fill: rgb(209, 217, 252);
   position: relative;
   &::before {
     content: '${props => props.newLabel}';
@@ -31,11 +30,13 @@ export const CustomNavLink = styled(NavLink)`
   border-radius: 50%;
   border: 2px solid transparent;
   &:hover {
-    fill: rgba(88, 117, 248, 0.151);
-    border: 2px solid rgba(88, 117, 248, 0.192);
+    fill: var(--color-sec);
+    border: 2px solid var(--color-sec);
   }
   &.active {
-    fill: rgb(88, 117, 248);
-    border: 2px solid rgb(88, 117, 248);
+    fill: var(--color-sec);
+    border: 2px solid var(--color-sec);
+    background-color: var(--color-sec);
+    color: var(--color-background);
   }
 `

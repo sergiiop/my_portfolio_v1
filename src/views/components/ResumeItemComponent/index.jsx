@@ -9,12 +9,19 @@ import {
 const ResumeItemComponent = ({ education }) => {
   return (
     <ResumeItemContainer>
-      <ResumeTitlesContainer>
+      <ResumeTitlesContainer year={education.year}>
         <ArticleTitle>{education.title}</ArticleTitle>
       </ResumeTitlesContainer>
       <ResumeItemContent>
-        <h4>{education.subtitle}</h4>
-
+        <h4
+          style={{
+            fontSize: '1.4rem',
+            marginBottom: '5px',
+            color: 'var(--color-sec)'
+          }}
+        >
+          {education.subtitle}
+        </h4>
         <ParagraphComponent>{education.description}</ParagraphComponent>
       </ResumeItemContent>
     </ResumeItemContainer>

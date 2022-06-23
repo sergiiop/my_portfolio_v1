@@ -1,14 +1,31 @@
 import {
+  ImageContainer,
   ProjectContainer,
   ProjectContent,
+  SourceContent,
   TechnologysContainer,
   TechnologySpan
 } from './Project.styled'
 import { useComponents } from '../../components'
 import { ArticleTitle } from '../ArticleTitle'
+import { SourceComponent } from '../SourceComponent'
+
+const colorTechnology = {
+  ReactJS: '#61dafb',
+  'HTML y CSS': 'var(--color-background)',
+  JavaScript: '#f7df1e',
+  Nodejs: 'green',
+  Expressjs: 'transparent',
+  WordPress: '#21759B',
+  'React Native': '#61dafb',
+  Firebase: '#FFC107',
+  Git: '#E84E31',
+  WebRTC: '#F7F7F7'
+}
 
 const Project = ({ project, left }) => {
   const { ParagraphComponent } = useComponents()
+  console.log(project.technologies)
   return (
     <ProjectContainer
       layout
@@ -21,14 +38,7 @@ const Project = ({ project, left }) => {
         <ArticleTitle>{project.title}</ArticleTitle>
         <ParagraphComponent>{project.description}</ParagraphComponent>
         <TechnologysContainer>
-          {project.tecnologies.map((technology, index) => {
-            const colorTechnology = {
-              React: 'cyan',
-              HTML: 'orange',
-              CSS: 'blue',
-              Nodejs: 'green',
-              Expressjs: 'transparent'
-            }
+          {project.technologies.map((technology, index) => {
             return (
               <TechnologySpan
                 backGround={colorTechnology[technology]}
@@ -40,7 +50,15 @@ const Project = ({ project, left }) => {
           })}
         </TechnologysContainer>
       </ProjectContent>
-      <img src={project.image} alt={project.title} />
+      <ImageContainer>
+        <img src={project.image} alt={project.title} />
+        <SourceContent>
+          {project.github && (
+            <SourceComponent href={project.github} icon='github' />
+          )}
+          {project.live && <SourceComponent href={project.live} icon='live' />}
+        </SourceContent>
+      </ImageContainer>
     </ProjectContainer>
   )
 }

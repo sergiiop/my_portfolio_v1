@@ -1,6 +1,12 @@
-import { FirstContainer, HomeContainer, Span } from './Home.element'
+import {
+  CallToActionContainer,
+  FirstContainer,
+  HomeContainer,
+  Span
+} from './Home.element'
 import { useComponents } from '../../components'
 import { useLayouts } from '../../layouts'
+import { useAssets } from '../../../assets'
 
 const Home = () => {
   const {
@@ -8,10 +14,13 @@ const Home = () => {
     TitleComponent,
     ParagraphComponent,
     LogoComponent,
-    SocialsIcon
+    SocialsIcon,
+    CallToAction
   } = useComponents()
 
   const { PublicLayout } = useLayouts()
+  const { useDocs } = useAssets()
+  const { CV } = useDocs()
 
   return (
     <PublicLayout>
@@ -23,12 +32,16 @@ const Home = () => {
           <TitleComponent>Sergio Pérez</TitleComponent>
           <SubtitleComponent>Systems Engineer</SubtitleComponent>
           <ParagraphComponent>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nisi
-            tempore repellat repellendus iusto deleniti asperiores in, ipsam
-            odit quia explicabo, a quas doloremque aliquam aut sunt! Alias,
-            ipsam totam.
+            I'm a systems engineer passionate about the web and learning, my
+            main goal is to specialize in frontend development, I love to learn
+            new technologies and I'm always looking for new opportunities to
+            grow my skills, also I want to be a part of a team that value my
+            skills and my work in order to improve my professional career.
           </ParagraphComponent>
           <LogoComponent />
+          <CallToActionContainer>
+            <CallToAction href={CV} download={'CV SERGIO PEREZ'} />
+          </CallToActionContainer>
         </FirstContainer>
         <SocialsIcon />
       </HomeContainer>

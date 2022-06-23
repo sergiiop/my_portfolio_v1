@@ -8,6 +8,7 @@ import { FilterButton } from './FilterButton'
 import { SpanComponent } from './SpanComponent'
 import { SubtitleComponent } from './SubtitleComponent'
 import { SkillComponent } from './SkillComponent'
+import { CallToAction } from './CallToAction'
 
 import { ResumeItemComponent } from './ResumeItemComponent'
 
@@ -23,7 +24,8 @@ const useComponents = () => {
     SpanComponent,
     SubtitleComponent,
     ResumeItemComponent,
-    SkillComponent
+    SkillComponent,
+    CallToAction
   }
 }
 

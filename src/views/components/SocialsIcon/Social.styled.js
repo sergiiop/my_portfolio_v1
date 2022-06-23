@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SocialIconContainer = styled.div`
+  color: var(--color-sec);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,8 +11,18 @@ export const SocialIconContainer = styled.div`
   &::after {
     content: '';
     width: 2px;
-    height: 4rem;
-    background-color: #000;
+    height: 6rem;
+    background-color: var(--color-sec);
+  }
+  @media screen and (max-width: 820px) {
+    right: 3rem;
+  }
+  @media screen and (max-width: 400px) {
+    right: 2rem;
+    bottom: 12rem;
+    &::after {
+      height: 3rem;
+    }
   }
 `
 
@@ -21,11 +32,11 @@ export const SocialLink = styled.a`
   position: relative;
   cursor: pointer;
   height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
   &::before {
     content: '${props => props.newLabel}';
     position: absolute;
@@ -42,5 +53,13 @@ export const SocialLink = styled.a`
   &:hover::before {
     opacity: 1;
     right: 4rem;
+  }
+  @media screen and (max-width: 400px) {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 1rem;
+    &::before {
+      font-size: 1rem;
+    }
   }
 `
