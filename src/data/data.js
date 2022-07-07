@@ -161,6 +161,16 @@ export const ProjectsData = [
     github: null,
     live: 'https://kalabasic.com/',
     genre: 'professional'
+  },
+  {
+    title: 'KALA BASIC',
+    description:
+      'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
+    image: KalaBasic,
+    technologies: ['WordPress'],
+    github: null,
+    live: 'https://kalabasic.com/',
+    genre: 'professional'
   }
 ]
 
