@@ -32,7 +32,7 @@ const Home = () => {
           <TitleComponent>Sergio Pérez</TitleComponent>
           <SubtitleComponent>Systems Engineer</SubtitleComponent>
           <ParagraphComponent>
-            I am a Systems Engineer with a passion for the web and learning, I am passionate about development on the frontend side but I am also very knowledgeable on the backend, I love learning new technologies and I am always looking for new opportunities to grow my skills, I am looking for Being part of a work team that values the skills that I have been developing in order to improve my professional career.
+          I am a systems engineer passionate about web development and learning, I have good foundations in frontend development as well as backend knowledge, I like to be constantly learning and learning about new technologies as I am always looking to improve my abilities. My goal right now is to be part of a good work team that gives me the opportunity to demonstrate my skills that I have been developing to improve my professional career.
           </ParagraphComponent>
           <LogoComponent />
           <CallToActionContainer>
