@@ -36,7 +36,7 @@ export const TechnologysContainer = styled.div`
 export const TechnologySpan = styled.span`
   padding: 5px 10px;
   color: var(--color-background);
-
+  font-size: 1.2rem;
   ${props =>
     props.backGround === `var(--color-background)` &&
     `

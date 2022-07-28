@@ -10,6 +10,7 @@ import Python from './python-5.svg'
 import React from './react-2.svg'
 import Redux from './redux.svg'
 import Mongo from './mongodb.svg'
+import Vite from './Vite.svg'
 
 const useIcons = () => {
   return {
@@ -24,7 +25,8 @@ const useIcons = () => {
     Python,
     React,
     Redux,
-    Mongo
+    Mongo,
+    Vite
   }
 }
 

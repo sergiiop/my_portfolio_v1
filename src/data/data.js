@@ -18,10 +18,11 @@ const {
   Python,
   React,
   Redux,
-  Mongo
+  Mongo,
+  Vite
 } = useIcons()
 
-const { TodoApp, Portfolio, ACI, KalaBasic, Prematix } = useImages()
+const { TodoApp, Portfolio, ACI, KalaBasic, Prematix, Weather } = useImages()
 
 export const NavbarIconData = [
   {
@@ -102,6 +103,11 @@ export const mySkillsData = [
     name: 'Docker',
     pathIcon: Docker,
     genre: 'others'
+  },
+  {
+    name: 'Vite',
+    pathIcon: Vite,
+    genre: 'others'
   }
 ]
 
@@ -117,7 +123,7 @@ export const ProjectsData = [
       'React Native',
       'Firebase',
       'WebRTC',
-      mySkillsData[10].name
+      mySkillsData[10].name,
     ],
     live: null,
     github: 'https://github.com/ramiroguzmanc/Prematix-web',
@@ -128,7 +134,7 @@ export const ProjectsData = [
     description:
       'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
     image: TodoApp,
-    technologies: [mySkillsData[0].name, mySkillsData[3].name],
+    technologies: [mySkillsData[0].name, mySkillsData[3].name,  mySkillsData[12].name],
     github: 'https://github.com/sergiiop/To-Do-List',
     live: 'https://sergiiop.github.io/To-Do-List/',
     genre: 'personal'
@@ -137,7 +143,7 @@ export const ProjectsData = [
     title: 'Portfolio',
     description: 'This is my portfolio website. It was built using React.',
     image: Portfolio,
-    technologies: [mySkillsData[0].name, mySkillsData[3].name],
+    technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
     github: 'https://github.com/sergiiop/my_portfolio',
     live: 'sergiioperez.com',
     genre: 'personal'
@@ -153,14 +159,14 @@ export const ProjectsData = [
     genre: 'professional'
   },
   {
-    title: 'KALA BASIC',
+    title: 'Weather App',
     description:
-      'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
-    image: KalaBasic,
-    technologies: ['WordPress'],
-    github: null,
-    live: 'https://kalabasic.com/',
-    genre: 'professional'
+      'this is an app i made to practice reactjs and api consumptions with axios',
+    image: Weather,
+    technologies: [mySkillsData[3].name, mySkillsData[12].name],
+    github: 'https://github.com/sergiiop/WeatherApp',
+    live: 'https://sergiiop.github.io/WeatherApp/',
+    genre: 'personal'
   },
   {
     title: 'KALA BASIC',
@@ -171,7 +177,7 @@ export const ProjectsData = [
     github: null,
     live: 'https://kalabasic.com/',
     genre: 'professional'
-  }
+  },
 ]
 
 export const EducationQualityData = [

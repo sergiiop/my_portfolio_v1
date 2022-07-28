@@ -20,7 +20,8 @@ const colorTechnology = {
   'React Native': '#61dafb',
   Firebase: '#FFC107',
   Git: '#E84E31',
-  WebRTC: '#F7F7F7'
+  WebRTC: '#F7F7F7',
+  Vite: 'linear-gradient(to left, #fc00ff, #00dbde)'
 }
 
 const Project = ({ project, left }) => {
