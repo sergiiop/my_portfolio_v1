@@ -1,4 +1,4 @@
-import Hero from './hero.jpg'
+import Hero from './my-photo.jpg'
 import Portfolio from './mainPortfolio.png'
 import TodoApp from './todolistApp.png'
 import ACI from './Aci.png'
