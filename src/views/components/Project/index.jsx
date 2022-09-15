@@ -26,7 +26,6 @@ const colorTechnology = {
 
 const Project = ({ project, left }) => {
   const { ParagraphComponent } = useComponents()
-  console.log(project.technologies)
   return (
     <ProjectContainer
       layout
